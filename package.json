@@ -1,0 +1,26 @@
+{
+  "name": "monorepo-development",
+  "version": "1.0.0",
+  "author": "Anton Bortnikov (https://abortnikov.ru)",
+  "license": "MIT",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "devDependencies": {
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb": "^18.0.1",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-react": "^7.18.3",
+    "eslint-plugin-react-hooks": "^2.3.0",
+    "rimraf": "^3.0.2",
+    "wsrun": "^5.2.0"
+  },
+  "scripts": {
+    "start": "wsrun -p @monorepo-development/uikit -c build && wsrun start",
+    "build": "wsrun --stages build",
+    "clean": "wsrun clean",
+    "lint": "eslint .",
+    "lint:fix": "yarn lint --fix"
+  }
+}
