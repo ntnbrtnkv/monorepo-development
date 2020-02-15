@@ -5,6 +5,10 @@ const Link = styled.a`
   color: inherit;
 `;
 
+const Avatar = styled.img`
+  border-radius: 50%;
+`;
+
 const GithubProfile = ({ username }) => {
   const [info, setInfo] = useState({});
 
@@ -15,7 +19,7 @@ const GithubProfile = ({ username }) => {
 
   return (
     <Link href={`http://github.com/${username}`}>
-      <img
+      <Avatar
         alt={`${username}'s avatar`}
         src={info.avatar_url}
       />
